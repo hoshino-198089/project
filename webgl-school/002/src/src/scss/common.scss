@@ -1,0 +1,186 @@
+@mixin pc($breakpoint: 829px) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+html {
+  font: 400 1.207vw / 1 -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Hiragino Sans", "Hiragino Kaku Gothic ProN", "メイリオ", Osaka,
+    "MS PGothic", sans-serif;
+  background-color: #8ebd64;
+  font-size: 0.120773vw;
+  @include pc {
+    font-size: 0.1vw !important;
+  }
+  @include pc(1001px) {
+    font-size: 1px !important;
+  }
+}
+a,
+[class*="bt"],
+[id*="bt"] {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+img,
+picture {
+  display: block;
+  width: 100%;
+  backface-visibility: hidden;
+}
+br {
+  @include pc {
+    &.sp {
+      display: none;
+    }
+  }
+}
+html,
+body {
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+#fog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  opacity: 0.7;
+  overflow: hidden;
+  will-change: mix-blend-mode;
+  /* display: none; */
+}
+
+#fog > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  animation: move 6s linear both infinite;
+  transform-origin: top;
+  will-change: transform, opacity;
+}
+
+#fog > div:nth-of-type(2) {
+  animation-delay: 2s;
+}
+
+#fog > div:nth-of-type(3) {
+  animation-delay: 4s;
+}
+
+#fog > div > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/img/noise.webp") repeat 0 0/1024px;
+  will-change: background-position;
+}
+
+@keyframes move {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(3);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(6);
+    opacity: 0;
+  }
+}
+
+#gameover,
+#gameclear,
+#init {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Barlow", sans-serif;
+  font-size: 90px;
+  font-weight: 500;
+  font-style: italic;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+}
+
+#gameover {
+  align-content: center;
+  p {
+    width: 100%;
+  }
+}
+
+#retryBtn {
+  display: none;
+  width: 230px;
+  height: 70px;
+  margin-top: 20px;
+  color: #fff;
+  border-radius: 10px;
+  letter-spacing: 0.1em;
+  background: linear-gradient(0deg, #333 0%, #000 100%);
+  font-size: 26px;
+  font-family: "IBM Plex Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border: none;
+  cursor: pointer;
+}
+
+#init {
+  align-items: flex-end;
+  align-content: center;
+  padding-top: 40px;
+  font-size: 16px;
+  font-family: "IBM Plex Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  opacity: 1;
+  visibility: visible;
+  p {
+    width: 100%;
+    line-height: 1.8;
+  }
+}
+
+#startBtn {
+  width: 230px;
+  height: 70px;
+  margin-bottom: 21px;
+  color: #fff;
+  border-radius: 10px;
+  letter-spacing: 0.1em;
+  background: linear-gradient(0deg, #333 0%, #000 100%);
+  font-size: 26px;
+  font-family: "IBM Plex Sans JP", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  border: none;
+  cursor: pointer;
+}
+
+canvas {
+  pointer-events: none;
+}
