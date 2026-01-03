@@ -4,8 +4,93 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>glsl-school</title>
+  <title>glsl school</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      background-color: #eee;
+      color: #333;
+      font-family: monospace;
+    }
+
+    body {
+      padding: 40px 50px;
+    }
+
+    h1 {
+      font-size: 50px;
+    }
+
+    .list {
+      margin-top: 40px;
+    }
+
+    .item {
+      padding-top: 30px;
+      border-top: thin solid #666;
+    }
+
+    .item+.item {
+      margin-top: 30px;
+    }
+
+    .theme,
+    .title {
+      font-size: 16px;
+    }
+
+    .title {
+      margin-top: 4px;
+    }
+
+    .sub,
+    .link {
+      font-size: 12px;
+    }
+
+    .link {
+      display: inline-block;
+      margin-top: 6px;
+    }
+  </style>
 </head>
 <body>
+  <h1>glsl school</h1>
+  <div class="list">
+    <div class="item">
+      <p class="theme">課題１：大量の頂点をXY平面上に配置しよう</p>
+      <p class="title">制作物：雨と傘の動き</p>
+      <a class="link" href="https://hoshino-198089.github.io/project/glsl-school/001/"
+        target="_blank">https://hoshino-198089.github.io/project/glsl-school/001/</a>
+    </div>
+    <div class="item">
+      <p class="theme">課題２：テクスチャを使った表現</p>
+      <p class="title">制作物：折り紙</p>
+      <p class="sub">∟ テクスチャを頂点シェーダで使ってみたいという興味</p>
+      <p class="sub">∟ webgl schoolで習ったインスタンシングの利用</p>
+      <a class="link" href="https://hoshino-198089.github.io/project/glsl-school/002/"
+        target="_blank">https://hoshino-198089.github.io/project/glsl-school/002/</a>
+    </div>
+    <div class="item">
+      <p class="theme">課題３：フラグメントシェーダだけを用いた表現</p>
+      <p class="title">制作物：ビル、雪、星</p>
+      <p class="sub">∟ modでの乱数の使い方や入れ子、走路の考え方などの研究</p>
+      <a class="link" href="https://hoshino-198089.github.io/project/glsl-school/003/"
+        target="_blank">https://hoshino-198089.github.io/project/glsl-school/003/</a>
+    </div>
+    <div class="item">
+      <p class="theme">作品発表会(内容自由)</p>
+      <p class="title">制作物：色による衝突判定</p>
+      <p class="sub">∟ 視覚的に直感な方法での判定、どんな複雑な形状でもカバーできるのではというロマン</p>
+      <p class="sub">∟ フレームバッファを複数枚使用し情報の圧縮</p>
+      <a class="link" href="https://hoshino-198089.github.io/project/glsl-school/004/"
+        target="_blank">https://hoshino-198089.github.io/project/glsl-school/004/</a>
+    </div>
+  </div>
 </body>
 </html>

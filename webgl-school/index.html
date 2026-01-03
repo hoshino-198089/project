@@ -4,8 +4,119 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>webgl-school</title>
+  <title>webgl school</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      background-color: #eee;
+      color: #333;
+      font-family: monospace;
+    }
+
+    body {
+      padding: 40px 50px;
+    }
+
+    h1 {
+      font-size: 50px;
+    }
+
+    .list {
+      margin-top: 40px;
+    }
+
+    .item {
+      padding-top: 30px;
+      border-top: thin solid #666;
+    }
+
+    .item+.item {
+      margin-top: 30px;
+    }
+
+    .theme,
+    .title {
+      font-size: 16px;
+    }
+
+    .title {
+      margin-top: 4px;
+    }
+
+    .sub,
+    .link {
+      font-size: 12px;
+    }
+
+    .link {
+      display: inline-block;
+      margin-top: 6px;
+    }
+  </style>
 </head>
 <body>
+  <h1>webgl school</h1>
+  <div class="list">
+    <div class="item">
+      <p class="theme">課題１：Box Geometryを100個以上使用すること</p>
+      <p class="title">制作物：ドミノ倒し</p>
+      <p class="sub">∟ SVGのパスから配置の自動生成を実験、等間隔に並べられず断念</p>
+      <p class="sub">∟ カメラを動かしたい気持ちから、牌を補間していく形で実装</p>
+      <a class="link" href="https://hoshino-198089.github.io/project/webgl-school/001/"
+        target="_blank">https://hoshino-198089.github.io/project/webgl-school/001/</a>
+    </div>
+    <div class="item">
+      <p class="theme">課題２：複数の回転を組み合わせ、首振り機能つきの扇風機の実現</p>
+      <p class="title">制作物：扇風機を止めるゲーム</p>
+      <p class="sub">∟ お題の「首振り」と講義に出てきた「フォグ」から、視界が悪いなかで探してる感じを連想</p>
+      <p class="sub">∟ お題の「複数の回転」から人型の作成に挑戦</p>
+      <a class="link" href="https://hoshino-198089.github.io/project/webgl-school/002/"
+        target="_blank">https://hoshino-198089.github.io/project/webgl-school/002/</a>
+    </div>
+    <div class="item">
+      <p class="theme">課題３：三角関数を活かして、地球上を飛ぶ旅客機の動きの実現</p>
+      <p class="title">制作物：旅客機、車、パラシュート</p>
+      <p class="sub">∟ 方向ベクトルを加算して徐々に目的地に向かう感じをパラシュート中のカメラで利用</p>
+      <p class="sub">∟ 講義に出てきたクォータニオンを使用して車の曲がる処理</p>
+      <a class="link" href="https://hoshino-198089.github.io/project/webgl-school/003/"
+        target="_blank">https://hoshino-198089.github.io/project/webgl-school/003/</a>
+    </div>
+    <div class="item">
+      <p class="theme">課題４：Raycaster と Plane（板）を使ってなにか作ろう</p>
+      <p class="title">制作物：狐の選択、坂道、ワープ</p>
+      <p class="sub">∟ Raycasterで同行する狐の選択、坂道にあわせて人型の位置調整</p>
+      <p class="sub">∟ ワープは講義に出たEffectComposerとブレンドを組み合わせた力技</p>
+      <a class="link" href="https://hoshino-198089.github.io/project/webgl-school/004/"
+        target="_blank">https://hoshino-198089.github.io/project/webgl-school/004/</a>
+    </div>
+    <div class="item">
+      <p class="theme">課題５：ネイティブなWebGLを使って五角形を作ろう</p>
+      <p class="title">制作物：画像からジオメトリの自動生成</p>
+      <p class="sub">∟ ドロネー三角形分割の基礎の理解</p>
+      <p class="sub">∟ GLSLで輪郭の検出</p>
+      <a class="link" href="https://hoshino-198089.github.io/project/webgl-school/005/"
+        target="_blank">https://hoshino-198089.github.io/project/webgl-school/005/</a>
+    </div>
+    <div class="item">
+      <p class="theme">課題６：フラグメントシェーダで陰影計算</p>
+      <p class="title">制作物：複製点光源</p>
+      <p class="sub">∟ 等間隔で並ぶ街灯と道路など、1つのモデルに対する処理の節約を意識</p>
+      <a class="link" href="https://hoshino-198089.github.io/project/webgl-school/006/"
+        target="_blank">https://hoshino-198089.github.io/project/webgl-school/006/</a>
+    </div>
+    <div class="item">
+      <p class="theme">課題７：テクスチャを複数同時に利用する実装</p>
+      <p class="title">制作物：ワープの演出</p>
+      <p class="sub">∟ ガラスでは、変形と環境マップでテクスチャを使用</p>
+      <p class="sub">∟ ワープのために有限距離で環境マップを参照するコードの作成</p>
+      <a class="link" href="https://hoshino-198089.github.io/project/webgl-school/007/"
+        target="_blank">https://hoshino-198089.github.io/project/webgl-school/007/</a>
+    </div>
+  </div>
 </body>
 </html>
